@@ -12,7 +12,7 @@ export default [
     {
         ignores: ['node_modules', 'dist'],
     },
-    js.configs.recommended,
+    pluginJs.configs.recommended,
     {
         languageOptions: {
             globals: {
@@ -25,8 +25,13 @@ export default [
     {
         files: ['**/*.{js, jsx}'],
         rules: {
-          ...eslintConfigPrettier.rules,
-          'prettier/prettier': 'error'
-        }
+            ...eslintConfigPrettier.rules,
+            'prettier/prettier': [
+                'error',
+                {
+                    endOfLine: 'auto',
+                },
+            ],
+        },
     },
 ];
