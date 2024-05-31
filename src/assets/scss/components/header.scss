@@ -5,6 +5,7 @@
     left: 0;
     z-index: var(--z-index-4);
     padding: 26px 0 22px;
+    background-color: var(--neutral-color-10);
     transition: transform var(--transition);
 
     &--hidden {

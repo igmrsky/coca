@@ -11,7 +11,7 @@
     }
 
     @include mobile {
-        min-height: calc(100dvh - 128px);
+        min-height: 100dvh;
     }
 
     &::before {
@@ -237,7 +237,7 @@
         }
 
         &-body {
-            &-th {
+            &-td {
                 font-weight: 700;
                 font-size: 20px;
                 line-height: 130%;
@@ -259,7 +259,7 @@
                     color: #60d39c;
 
                     &::before {
-                        background-image: url('../assets/icons/angle-up-green.svg');
+                        background-image: url('../icons/angle-up-green.svg');
                     }
                 }
 
@@ -267,7 +267,7 @@
                     color: #e35454;
 
                     &::before {
-                        background-image: url('../assets/icons/angle-down.svg');
+                        background-image: url('../icons/angle-down.svg');
                     }
                 }
 
