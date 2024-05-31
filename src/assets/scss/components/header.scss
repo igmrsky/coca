@@ -1,5 +1,15 @@
 .header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: var(--z-index-4);
     padding: 26px 0 22px;
+    transition: transform var(--transition);
+
+    &--hidden {
+        transform: translateY(-118px);
+    }
 
     @include mobile {
         padding: 22px 0 18px;
@@ -97,6 +107,11 @@
             text-align: center;
             color: var(--neutral-color-140);
             transform: translateX(-50%);
+
+            @include small-tablet {
+                top: -30px;
+                font-size: 20px;
+            }
         }
 
         &-checkbox {
@@ -136,6 +151,7 @@
         color: var(--neutral-color-100);
 
         @include small-tablet {
+            font-size: 20px;
             line-height: 200%;
         }
 
