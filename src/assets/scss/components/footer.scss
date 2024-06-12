@@ -137,14 +137,89 @@
     }
 
     &__item {
+        &-title-wrapper {
+            /* stylelint-disable-next-line selector-class-pattern */
+            &.footer__item-title-wrapper--active {
+                span {
+                    transform: rotate(45deg);
+                }
+            }
+
+            @include mobile {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 24px;
+                cursor: pointer;
+            }
+        }
+
         &-title {
             margin-bottom: 24px;
             font-weight: 700;
             color: #fff;
+
+            @include mobile {
+                margin-bottom: 0;
+            }
+        }
+
+        &-title-btn {
+            display: none;
+
+            @include mobile {
+                position: relative;
+                display: inline-flex;
+                width: 24px;
+                height: 24px;
+                background-color: transparent;
+                transform: rotate(0);
+                transition: transform var(--transition);
+
+                &::before {
+                    width: 50%;
+                    height: 2px;
+                }
+
+                &::after {
+                    width: 2px;
+                    height: 50%;
+                }
+
+                &::before,
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    background-color: #fff;
+                    transform: translate(-50%, -50%);
+                }
+            }
         }
 
         @include mobile {
             min-width: 143px;
+        }
+    }
+
+    &__sublist {
+        @include mobile {
+            max-height: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition:
+                max-height var(--transition),
+                opacity var(--transition),
+                visibility var(--transition);
+        }
+
+        &--active {
+            opacity: 1;
+            visibility: visible;
+            transition:
+                max-height var(--transition),
+                opacity var(--transition) .2s,
+                visibility var(--transition) .2s;
         }
     }
 

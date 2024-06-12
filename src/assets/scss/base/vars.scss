@@ -13,8 +13,10 @@
     --neutral-color-140: #000;
     --neutral-color-150: #d9d9d9;
     --neutral-color-160: #1d1e25;
+    --neutral-color-170: #161a34;
 
     // primary colors
+    --primary-color-30: #1463ff;
     --primary-color-50: #4e7ddb;
 
     // success colors
@@ -23,6 +25,9 @@
     // logo colors
     --logo-color-text: #101010;
     --logo-color-circle: #101010;
+
+    // border colors
+    --border-color-10: #1463ff;
 
     // overview colors
     --overview-bg-color: #1d1e25;
@@ -63,6 +68,7 @@
     --neutral-color-140: #fff;
     --neutral-color-150: #828282;
     --neutral-color-160: #18181d;
+    --neutral-color-170: #18181d;
 
     // logo colors
     --logo-color-text: #fff;
@@ -73,4 +79,7 @@
 
     // overview colors
     --overview-bg-color: #18181d;
+
+    // border colors
+    --border-color-10: #4b628f;
 }
