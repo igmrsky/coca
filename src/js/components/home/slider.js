@@ -9,7 +9,6 @@ export const useInsightSlider = () => {
         modules: [Scrollbar],
         slidesPerView: 2,
         spaceBetween: 32,
-        grabCursor: true,
         loop: true,
         scrollbar: {
             el: '.insight__scrollbar',
