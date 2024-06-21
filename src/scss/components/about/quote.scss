@@ -1,0 +1,43 @@
+.quote {
+    &__container {
+        @include flex-all-center-between;
+        border-top: 1px solid var(--neutral-color-30);
+        border-bottom: 1px solid var(--neutral-color-30);
+        padding-top: 85px;
+        padding-bottom: 85px;
+
+        @include small-desktop {
+            gap: 30px;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        @include small-mobile {
+            padding-top: 55px;
+            padding-bottom: 55px;
+        }
+    }
+
+    &__title {
+        max-width: 480px;
+        font-weight: 600;
+        letter-spacing: -0.04em;
+        color: var(--neutral-color-100);
+
+        @include small-desktop {
+            max-width: none;
+        }
+    }
+
+    &__descr {
+        max-width: 522px;
+        font-weight: 600;
+        line-height: 150%;
+        color: var(--neutral-color-100);
+
+        @include small-desktop {
+            max-width: none;
+        }
+    }
+}

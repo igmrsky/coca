@@ -1,0 +1,207 @@
+.blog-one {
+    padding: 194px 0 160px;
+
+    @include mobile {
+        padding: 154px 0 60px;
+    }
+
+    &__container {
+        margin: 0 auto;
+        padding: 0 var(--container-padding);
+        max-width: calc(var(--blog-one-container-width) + (var(--container-padding) * 2));
+    }
+
+    &__title {
+        margin-bottom: 80px;
+        max-width: 970px;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+
+        @include mobile {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__info {
+        @include flex-all-center-between;
+        margin-bottom: 24px;
+
+        @include mobile {
+            gap: 10px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__author {
+        @include flex-align-center;
+        gap: 24px;
+
+        &-img {
+            border-radius: 50%;
+        }
+
+        &-inner {
+            @include flex-column;
+            gap: 4px;
+        }
+
+        &-name {
+            font-weight: 600;
+            line-height: 144%;
+        }
+
+        &-occupation {
+            font-weight: 500;
+            line-height: 162%;
+            color: #7e8492;
+        }
+    }
+
+    &__time {
+        align-self: flex-end;
+        font-weight: 500;
+        line-height: 150%;
+        color: #7e8492;
+
+        @include mobile {
+            align-self: flex-start;
+        }
+    }
+
+    &__img {
+        margin-bottom: 80px;
+
+        @include mobile {
+            margin-bottom: 40px;
+        }
+    }
+
+    p {
+        margin-bottom: 56px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 178%;
+
+        @include mobile {
+            margin-bottom: 36px;
+        }
+    }
+
+    h3 {
+        margin-bottom: 24px;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 120%;
+    }
+
+    &__writer {
+        display: flex;
+        gap: 48px;
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        img {
+            align-self: flex-start;
+        }
+
+        &-info {
+            @include flex-column;
+
+            &-socials {
+                @include flex-align-center;
+                margin-bottom: 14px;
+
+                @include mobile {
+                    gap: 10px 0;
+                    flex-wrap: wrap;
+                }
+            }
+
+            &-link {
+                @include flex-all-center;
+                border-radius: 50%;
+                width: 32px;
+                height: 32px;
+                background-color: var(--neutral-color-180);
+                transition: background-color var(--transition);
+
+                svg {
+                    path {
+                        fill: var(--neutral-color-100);
+                    }
+                }
+
+                &--facebook {
+                    svg {
+                        transform: translate(1px, 3px);
+                    }
+                }
+
+                &:hover {
+                    background-color: var(--neutral-color-100);
+
+                    svg {
+                        path {
+                            fill: var(--neutral-color-10);
+                            transition: fill var(--transition);
+                        }
+                    }
+                }
+
+                &:not(:last-child) {
+                    margin-right: 32px;
+                }
+
+                &:last-child {
+                    margin-right: 24px;
+                }
+            }
+
+            &-share {
+                transition:
+                    opacity var(--transition),
+                    transform var(--transition);
+
+                &:hover {
+                    opacity: 0.8;
+                    transform: scale(1.1);
+                }
+            }
+
+            &-by {
+                font-weight: 400;
+                line-height: 150%;
+                color: #7e8492;
+            }
+
+            &-name {
+                font-weight: 600;
+                letter-spacing: -0.03em;
+            }
+
+            &-occupation {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 162%;
+                color: #7e8492;
+            }
+
+            &-descr {
+                max-width: 650px;
+                font-weight: 400;
+                line-height: 178%;
+            }
+
+            &-by,
+            &-name,
+            &-occupation,
+            &-descr {
+                display: inline-block;
+                margin-bottom: 16px;
+            }
+        }
+    }
+}

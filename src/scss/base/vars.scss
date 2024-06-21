@@ -14,6 +14,7 @@
     --neutral-color-150: #d9d9d9;
     --neutral-color-160: #1d1e25;
     --neutral-color-170: #161a34;
+    --neutral-color-180: #e8e9eb;
 
     // primary colors
     --primary-color-30: #1463ff;
@@ -35,6 +36,7 @@
     // container
     --container-padding: 15px;
     --container-width: 1200px;
+    --blog-one-container-width: 940px;
 
     @include mini-desktop {
         --container-width: 1000px;
@@ -69,6 +71,7 @@
     --neutral-color-150: #828282;
     --neutral-color-160: #18181d;
     --neutral-color-170: #18181d;
+    --neutral-color-180: #33343a;
 
     // logo colors
     --logo-color-text: #fff;

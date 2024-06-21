@@ -1,0 +1,255 @@
+.team {
+    position: relative;
+    padding: 160px 0;
+
+    @include small-tablet {
+        padding: 80px 0;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 10px;
+        right: 0;
+        z-index: var(--z-index-0);
+        display: inline-block;
+        border-radius: 50%;
+        width: 525px;
+        height: 525px;
+        background-color: var(--success-color-70);
+        filter: blur(180px);
+
+        @include mini-desktop {
+            width: 325px;
+            height: 325px;
+        }
+
+        @include small-tablet {
+            width: 225px;
+            height: 225px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 24px;
+        max-width: 894px;
+        font-weight: 600;
+        letter-spacing: -0.04em;
+    }
+
+    &__descr {
+        margin-bottom: 80px;
+        max-width: 534px;
+        font-weight: 500;
+        line-height: 178%;
+        color: #7e8492;
+    }
+
+    &__navigation {
+        margin-bottom: 100px;
+
+        @include tablet {
+            @include flex-all-center-between;
+            position: relative;
+        }
+
+        @include mobile {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__btn {
+        display: none;
+
+        @include tablet {
+            @include flex-all-center;
+            position: absolute;
+            z-index: var(--z-index-2);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            background-color: var(--neutral-color-100);
+            transition: opacity var(--transition);
+
+            &:hover {
+                opacity: 0.8;
+            }
+
+            &--prev {
+                left: -10px;
+            }
+
+            &--next {
+                right: -10px;
+                transform: rotate(180deg);
+            }
+
+            svg {
+                path {
+                    fill: var(--neutral-color-10);
+                }
+            }
+        }
+
+        @include small-mobile {
+            width: 40px;
+            height: 40px;
+
+            &--prev {
+                transform: translateY(-15px);
+            }
+
+            &--next {
+                transform: rotate(180deg) translateY(15px);
+            }
+        }
+    }
+
+    &__slider {
+        position: relative;
+
+        &-hint {
+            @include flex-all-center;
+            position: absolute;
+            top: 177px;
+            left: 33%;
+            z-index: var(--z-index-2);
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            background-color: #fff;
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%);
+            transition: opacity var(--transition);
+
+            &--hidden {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            @include mini-desktop {
+                top: 137px;
+                left: 32%;
+                transform: translateX(-40%);
+            }
+
+            @include tablet {
+                display: none;
+            }
+        }
+    }
+
+    &__article {
+        @include mobile {
+            text-align: center;
+        }
+
+        &-img {
+            margin-bottom: 16px;
+        }
+
+        &-info {
+            @include flex-justify-between;
+            gap: 15px;
+            max-width: 379px;
+
+            @include mobile {
+                margin: 0 auto;
+            }
+        }
+
+        &-status {
+            @include flex-column;
+            gap: 8px;
+        }
+
+        &-name {
+            font-weight: 600;
+            line-height: 150%;
+        }
+
+        &-occupation {
+            font-weight: 500;
+            line-height: 150%;
+            color: #7e8492;
+
+            @include mobile {
+                text-align: left;
+            }
+        }
+
+        &-links {
+            display: flex;
+            gap: 8px;
+            align-items: baseline;
+        }
+
+        &-link {
+            @include flex-all-center;
+            border-radius: 50%;
+            padding: 8px;
+            width: 16px;
+            height: 16px;
+            background-color: var(--neutral-color-180);
+            transition: background-color var(--transition);
+
+            svg {
+                path {
+                    fill: var(--neutral-color-100);
+                }
+            }
+
+            &:hover {
+                background-color: var(--neutral-color-100);
+
+                svg {
+                    path {
+                        fill: var(--neutral-color-10);
+                        transition: fill var(--transition);
+                    }
+                }
+            }
+        }
+    }
+
+    &__invitation {
+        @include flex-all-center-between;
+        gap: 15px;
+
+        @include small-tablet {
+            gap: 30px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &-title {
+            max-width: 626px;
+            font-weight: 600;
+            letter-spacing: -0.04em;
+
+            @include small-tablet {
+                max-width: 566px;
+            }
+        }
+
+        &-descr {
+            margin-bottom: 24px;
+            max-width: 506px;
+            font-weight: 500;
+            line-height: 178%;
+            color: #7e8492;
+        }
+
+        &-link {
+            display: inline-block;
+            font-weight: 600;
+            line-height: 150%;
+            transition: transform var(--transition);
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
