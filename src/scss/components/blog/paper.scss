@@ -1,0 +1,130 @@
+.paper {
+    padding: 160px 0;
+
+    @include mobile {
+        padding: 80px 0;
+    }
+
+    &__top {
+        @include flex-all-center-between;
+        margin-bottom: 80px;
+
+        @include mobile {
+            gap: 30px;
+            flex-direction: column;
+            margin-bottom: 60px;
+        }
+    }
+
+    &__head {
+        max-width: 435px;
+    }
+
+    &__title {
+        margin-bottom: 24px;
+        font-weight: 600;
+        letter-spacing: -0.04em;
+    }
+
+    &__descr {
+        font-weight: 500;
+        line-height: 178%;
+        color: #7e8492;
+    }
+
+    &__navigation {
+        @include flex-align-center;
+        gap: 16px;
+
+        @include mobile {
+            align-self: flex-end;
+        }
+    }
+
+    &__btn {
+        @include flex-all-center;
+        border: 1px solid var(--neutral-color-40);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        transition:
+            background-color var(--transition),
+            border-color var(--transition);
+
+        @include small-mobile {
+            width: 40px;
+            height: 40px;
+        }
+
+        svg path {
+            transition: fill var(--transition);
+        }
+
+        &.swiper-button-disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        &:hover:not(.swiper-button-disabled) {
+            border-color: var(--neutral-color-100);
+            background-color: var(--neutral-color-100);
+
+            & svg path {
+                fill: var(--neutral-color-10);
+            }
+        }
+
+        &--next {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__wrapper {
+        margin: 0 auto;
+        width: fit-content;
+    }
+
+    &__article {
+        &-img {
+            margin-bottom: 24px;
+
+            @include small-tablet {
+                height: 70dvh;
+                text-align: center;
+            }
+        }
+
+        &-text {
+            @include flex-column;
+            max-width: 407px;
+
+            @include small-tablet {
+                margin: 0 auto;
+            }
+
+            &--big {
+                max-width: 476px;
+            }
+        }
+
+        &-title {
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 131%;
+            letter-spacing: -0.03em;
+        }
+
+        &-descr {
+            margin-bottom: 24px;
+            font-weight: 500;
+            line-height: 178%;
+            color: #7e8492;
+        }
+
+        &-link {
+            align-self: flex-start;
+            border: 1px solid #ced1d8;
+            padding: 16px 46px;
+        }
+    }
+}

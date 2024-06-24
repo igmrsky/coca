@@ -13,6 +13,7 @@ export const useActivitySlider = () => {
         loopAddBlankSlides: false,
         spaceBetween: 32,
         slidesPerView: 1,
+        autoHeight: false,
         breakpoints: {
             767: {
                 slidesPerView: 2,

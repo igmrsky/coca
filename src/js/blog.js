@@ -8,6 +8,7 @@ import { useFooterAccordion } from './components/footer-accordion.js';
 import { useActivitySlider } from './components/blog/activity-slider.js';
 import { useFilter } from './components/blog/filter.js';
 import { useActivityHintHide } from './components/blog/activity-hint-hide.js';
+import { usePaperSlider } from './components/blog/paper-slider.js';
 
 useTheme();
 useHeaderScroll();
@@ -16,3 +17,4 @@ useFooterAccordion();
 useActivitySlider();
 useFilter();
 useActivityHintHide();
+usePaperSlider();
