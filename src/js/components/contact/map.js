@@ -2,7 +2,7 @@ export const useMap = () => {
     async function initMap() {
         await ymaps3.ready;
 
-        const { YMap, YMapDefaultSchemeLayer } = ymaps3;
+        const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer } = ymaps3;
         const { YMapDefaultMarker } = await ymaps3.import('@yandex/ymaps3-markers@0.0.1');
 
         const map = new YMap(document.getElementById('map'), {
@@ -12,6 +12,7 @@ export const useMap = () => {
             },
         });
 
+        map.addChild(new YMapDefaultFeaturesLayer());
         map.addChild(new YMapDefaultSchemeLayer());
         
         map.addChild(
