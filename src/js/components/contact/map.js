@@ -8,7 +8,7 @@ export const useMap = () => {
         const map = new YMap(document.getElementById('map'), {
             location: {
                 center: [139, -26],
-                zoom: 3.5,
+                zoom: 2,
             },
         });
 
@@ -22,6 +22,8 @@ export const useMap = () => {
                 color: 'blue',
             }),
         );
+
+        window.map = map;
     }
 
     initMap();
