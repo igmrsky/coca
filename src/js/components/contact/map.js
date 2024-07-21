@@ -22,8 +22,6 @@ export const useMap = () => {
                 color: 'blue',
             }),
         );
-
-        map.addChild(new YMapDefaultMarker());
     }
 
     initMap();
